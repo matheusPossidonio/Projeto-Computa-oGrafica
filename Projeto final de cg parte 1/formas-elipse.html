@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Formas - Elipses</title>    
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/p5.min.js"></script> 
+    <script src="js/funcoesGerais.js"></script>
+    <script src="js/elipse.js"></script> 
+    <script src="js/metodosUtilitarios.js"></script>
+</head>
+
+<body>
+    
+    
+
+<main>
+    <header ><a class="btn"  href="home.html">HOME</a></header>
+    <div class="container-fluid">
+        <div class="container">
+            <div class="row">
+                <h1 class="mt-4">Gerando uma elipse por varredura</h1>
+            </div>
+            <div class="row">
+                <div class="col-xl-5 controles">
+                    <h5 class="mt-4">Informe os dados necessários:</h5>
+                    <div class="row">
+                        <div class="col">
+                            <input id="x_origem" type="text" class="form-control" placeholder="Informe o X da Origem">
+                        </div>
+                        <div class="col">
+                            <input id="y_origem" type="text" class="form-control" placeholder="Informe o Y da Origem">
+                        </div>
+                        <div class="col">
+                            <input id="raio_x" type="text" class="form-control" placeholder="Informe o raio X">
+                        </div>
+                        <div class="col">
+                            <input id="raio_y" type="text" class="form-control" placeholder="Informe o raio Y">
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col">
+                            <select id="algoritmo" class = "btn" class="form-select">
+                                <option selected>Selecione o algoritmo</option>
+                                <option value="ponto-medio">Ponto Médio</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="row botao mt-4">
+                        <div class="col">
+                            <button id="desenhar-elipse" class="btn btn-primary mb-2">Desenhar elipse</button>
+                        </div>
+                    </div>
+                    
+                    <div class="row botao">
+                        <div class="col">
+                            <button id="limpar" class="btn btn-primary mb-2">Limpar</button>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="col-xl-7 pt-3">
+                    <div id="screen"></div> 
+                    <!-- <ul id="coordenadas-mouse" class="list-inline">
+                        <li class="list-inline-item"><b>X:</b></li>
+                        <li id="mouseX" class="list-inline-item">0</li>
+                        <li class="list-inline-item"><b>Y:</b></li>
+                        <li id="mouseY" class="list-inline-item">0</li>
+                    </ul> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+    
+</body>
+</html>

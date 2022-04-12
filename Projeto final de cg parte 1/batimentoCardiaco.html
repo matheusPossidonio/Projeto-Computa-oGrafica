@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulação Batimentos Cardíacos</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/p5.min.js"></script> 
+    <script src="js/funcoesGerais.js"></script>
+    <script src="js/batimentosCardiacos.js"></script> 
+    <script src="js/metodosUtilitarios.js"></script>
+</head>
+<body>
+    <header ><a class="btn"  href="home.html">HOME</a></header>
+    <div class="home">
+    <div class="container-fluid">
+        <div class="container">
+            <div class="row">
+                <h1 class="mt-4" text-align: center;>Batimentos Cardíacos</h1>
+            </div>
+            <div class="row">
+                <div class="col-xl-12 pt-3">  
+                    <div id="screen"></div>
+                </div>
+                <div class="col">
+                    <label for="slider-idade" class="form-label-text-primary" >Idade</label>
+                    <input type="range" class="form-range" min="20" max="70" step="5" id="slider-idade">
+                </div>
+                <div class="col">
+                    <label for="slide-situacao" class="form-label-text-primary" >Situacao</label>
+                    <input type="range" class="form-range" min="0" max="4" step="1" id="slider-situacao">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

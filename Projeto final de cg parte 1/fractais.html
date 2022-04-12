@@ -1,0 +1,49 @@
+<html>
+   <head>
+      <title>Fractais</title>
+      <meta charset="utf-8"/>
+      <link rel="stylesheet" href="css/styles.css">
+      <link type="text/css" rel="stylesheet" href="lib/turtle.css" />
+      <style>
+         body {
+            background-color:#d3d3d3;
+         }
+         #midcolumn {
+            align-items:center;
+         }
+         #imagecanvas {
+            border:none;
+            align-self:center;
+            margin-left:220px;
+         }
+         .iteracoes {
+            align-self:center;
+            left:450px;
+            margin:20px;
+            position:relative;
+         }
+         #iterText {
+            font-size:20px;
+         }
+      </style>
+   </head>
+   <body>
+    <header ><a class="btn"  href="home.html">HOME</a></header>
+      <div id="wrap" >
+         <h1>Implementação Fractais</h1>
+         <div id="midcolumn">
+            <div class="iteracoes">
+               <span id="iterText">Número de iterações:</span>
+               <input type="number" value="1" id="numeroIteracoes" autofocus onfocus="this.value = this.value;"/>
+               <button onclick="aplicarIteracao()">enviar</button>
+            </div>
+            <canvas id="turtlecanvas" width="700" height="700" style="display:none;"></canvas>
+            <canvas id="imagecanvas" width="700" height="700" ></canvas>
+         </div>
+      <script type="text/javascript" src="lib/library.js"></script>
+      <script type="text/javascript" src="lib/functions.js"></script>
+      <script type="text/javascript" src="js/fractais.js"></script>
+   </body>
+</html>
+<!--<span id="coords"></span>-->
+

@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Composição 2D</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/p5.min.js"></script>
+    <script src="js/funcoesGerais.js"></script>
+    <script src="./js/2D_Composition.js"></script>
+    <script src="js/metodosUtilitarios.js"></script>
+</head>
+
+<body>
+    <main>
+        <header ><a class="btn"  href="home.html">HOME</a></header>
+        <div class="container-fluid">
+            <div class="container">
+                <div class="row">
+                    <h1 class="mt-4">Composição Transformações 2D</h1>
+                </div>
+                <div class="row">
+                    <div class="col-xl-5 controles">
+                        <h5 class="mt-4">Informe os dados necessários:</h5>
+                        <div class="row" id="pontos-figura">
+                            <div class="row">
+                                <div class="col">
+                                    <input name="x-figura[]" type="text" class="form-control" placeholder="X do ponto">
+                                </div>
+                                <div class="col">
+                                    <input name="y-figura[]" type="text" class="form-control" placeholder="Y do ponto">
+                                </div>
+                                <div class="col">
+                                    <input name="x-figura[]" type="text" class="form-control" placeholder="X do ponto">
+                                </div>
+                                <div class="col">
+                                    <input name="y-figura[]" type="text" class="form-control" placeholder="Y do ponto">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="buttonadd" class="btn-group" role="group" aria-label="Basic mixed styles example">
+                            <button type="button" class="btn btn-danger" onclick="removerCampo()">-</button>
+                            <button type="button" class="btn btn-success" onclick="adicionarCampo()">+</button>
+                        </div>
+
+                        <div class="row botao mt-4">
+                            <div class="col">
+                                <button id="desenhar-figura" class="btn btn-primary mb-2">Desenhar Figura</button>
+                            </div>
+                        </div>
+
+                        <h5 class="mt-4">Transformações</h5>
+                        <div class="row" id="text">
+                            <ul>
+                                <li>Escala (SX,SY)</li>
+                                <li>Translacao (TX,TY)</li>
+                                <li>Rotacao (graus,sentido)</li>
+                                <li>Cisalhamento(valor cisalhamento,eixo)</li>
+                                <li>Reflexao (eixo, m da reta , b da reta)</li>
+                            </ul>
+                        </div>
+                        <div class="form-check form-switch" id="text">
+                            <input class="form-check-input" type="checkbox" id="deixa-rastro" checked>
+                            <label class="form-check-label" for="flexSwitchCheckDefault">Deixar rastro</label>
+                        </div>
+                        <div id="opcoes-transformacao">
+                            <div class="row">
+                                <div class="col">
+                                    <input name="transformacoes[]" type="text" class="form-control"
+                                        placeholder="Transformacao">
+                                </div>
+                                <div class="col">
+                                    <input name="valor1-transformacoes[]" type="text" class="form-control"
+                                        placeholder="Valor 1">
+                                </div>
+                                <div class="col">
+                                    <input name="valor2-transformacoes[]" type="text" class="form-control"
+                                        placeholder="Valor 2">
+                                </div>
+                                <div class="col">
+                                    <input name="valor3-transformacoes[]" type="text" class="form-control"
+                                        placeholder="Valor 3">
+                                </div>
+                            </div>
+                        </div>
+                        <div id="buttonadd" class="btn-group" role="group" aria-label="Basic mixed styles example">
+                            <button type="button" class="btn "
+                                onclick="removerCampoTransformacao()">-</button>
+                            <button type="button" class="btn "
+                                onclick="adicionarCampoTransformacao()">+</button>
+                        </div>
+
+
+                        <div class="row botao mt-4">
+                            <div class="col">
+                                <button id="transformar" class="btn btn-primary mb-2">Transformar</button>
+                            </div>
+                        </div>
+
+
+                        <div class="row botao">
+                            <div class="col">
+                                <button id="limpar" class="btn btn-primary mb-2">Limpar</button>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-xl-12 pt-3">
+                        <div id="screen"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+</body>
+
+</html>

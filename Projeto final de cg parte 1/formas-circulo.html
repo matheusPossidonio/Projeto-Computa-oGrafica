@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Formas - Circulos</title>    
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/p5.min.js"></script> 
+    <script src="js/circulo.js"></script> 
+    <script src="js/metodosUtilitarios.js"></script>
+    <script src="js/funcoesGerais.js"></script>
+</head>
+
+<body>
+    
+<main>
+    <header ><a class="btn"  href="home.html">HOME</a></header>
+    <div class="container-fluid">
+        <div class="container">
+            <div class="row">
+                <h1 class="mt-4">Gerando um círculo por varredura</h1>
+            </div>
+            <div class="row">
+                <div class="col-xl-5 controles">
+                    <h5 class="mt-4">Informe os dados necessários:</h5>
+                    <div class="row">
+                        <div class="col">
+                            <input id="x_origem" type="text" class="form-control" placeholder="X da Origem">
+                        </div>
+                        <div class="col">
+                            <input id="y_origem" type="text" class="form-control" placeholder="Y da Origem">
+                        </div>
+                        <div class="col">
+                            <input id="raio" type="text" class="form-control" placeholder=" Informe o raio:">
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col" >
+                            <select id="algoritmo" class= "btn" class="form-select">
+                                <option selected>Selecione o algoritmo</option>
+                                <option value="ponto-medio">Ponto Médio</option>
+                                <option value="equacao-explicita">Equação explícita</option>
+                                <option value="metodo-trigonometrico">Método trigonométrico</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="row botao mt-4" >
+                        <div class="col">
+                            <button id="desenhar-circunferencia" class="btn">Desenhar círculo</button>
+                        </div>
+                    </div>
+                    
+                    <div class="row botao">
+                        <div class="col">
+                            <button widgth id="limpar" class="btn"class="btn btn-primary mb-2">Limpar</button>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div padding class="col-xl-7 pt-3">
+                    <div id="screen"></div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+    
+</body>
+</html>

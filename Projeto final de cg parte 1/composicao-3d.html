@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Composição 3D</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/p5.min.js"></script>
+    <script src="js/funcoesGerais.js"></script>
+    <script src="./js/3D_Composition.js"></script>
+    <script src="js/metodosUtilitarios.js"></script>
+</head>
+
+<body>
+
+    <main>
+        <header ><a class="btn"  href="home.html">HOME</a></header>
+        <div class="container-fluid">
+            <div class="container">
+                <div class="row">
+                    <h1 class="mt-4">Composição Transformações 3D</h1>
+                </div>
+                <div class="row">
+                    <div class="col-xl-5 controles">
+                        <h5 class="mt-4">Informe os dados necessários:</h5>
+                        <div class="row" id="pontos-figura">
+                            <div class="row">
+                                <div class="col">
+                                    <input id="x-figura" name="x-figura" type="text" class="form-control"
+                                        placeholder="X da Origem">
+                                </div>
+                                <div class="col">
+                                    <input id="y-figura" name="y-figura" type="text" class="form-control"
+                                        placeholder="Y da Origem">
+                                </div>
+                                <div class="col">
+                                    <input id="z-figura" name="z-figura" type="text" class="form-control"
+                                        placeholder="Z da Origem">
+                                </div>
+                                <div class="col">
+                                    <input id="comprimento" name="comprimento" type="text" class="form-control"
+                                        placeholder="Comprimento">
+                                </div>
+                                <div class="col">
+                                    <input id="largura" name="largura" type="text" class="form-control"
+                                        placeholder="Largura">
+                                </div>
+                                <div class="col">
+                                    <input id="altura" name="altura" type="text" class="form-control"
+                                        placeholder="Altura">
+                                </div>
+                            </div>
+                            </div>
+
+                        <div class="row botao mt-4">
+                            <div class="col">
+                                <button id="desenhar-figura" class="btn btn-primary mb-2">Desenhar Figura</button>
+                            </div>
+                        </div>
+
+                        <h5 class="mt-4">Transformações</h5>
+                        <div class="row" id="text">
+                            <ul>
+                                <li>Escala (SX,SY,SZ)</li>
+                                <li>Translacao (TX,TY,TZ)</li>
+                                <li>Rotacao (graus,eixo)</li>
+                                <li>Cisalhamento(valor cisalhamento 1 , valor cisalhamento 2,eixo)</li>
+                                <li>Reflexao (plano)</li>
+                            </ul>
+                        </div>
+                        <div class="form-check form-switch" id="text">
+                            <input class="form-check-input" type="checkbox" id="deixa-rastro" checked>
+                            <label class="form-check-label" for="flexSwitchCheckDefault">Deixar rastro</label>
+                        </div>
+                        <label id="buttonadd" for="slide-eixo-x" class="form-label text-success">Rotacao X</label>
+                        <input  type="range" class="form-range" min="0" max="90" step="1" id="slider-eixo-x">
+                        <label for="slide-eixo-y" class="form-label text-primary ">Rotacao Y</label>
+                        <input type="range" class="form-range" min="0" max="90" step="1" id="slider-eixo-y">
+                        <label for="slide-eixo-z" class="form-label text-warning ">Rotacao Z</label>
+                        <input type="range" class="form-range" min="0" max="90" step="1" id="slider-eixo-z">
+                        <div id="opcoes-transformacao">
+                            <div class="row">
+                                <div class="col">
+                                    <input name="transformacoes[]" type="text" class="form-control"
+                                        placeholder="Transformacao">
+                                </div>
+                                <div class="col">
+                                    <input name="valor1-transformacoes[]" type="text" class="form-control"
+                                        placeholder="Valor 1">
+                                </div>
+                                <div class="col">
+                                    <input name="valor2-transformacoes[]" type="text" class="form-control"
+                                        placeholder="Valor 2">
+                                </div>
+                                <div class="col">
+                                    <input name="valor3-transformacoes[]" type="text" class="form-control"
+                                        placeholder="Valor 3">
+                                </div>
+                            </div>
+                        </div>
+                        <div  id="buttonadd" class="btn-group" role="group" aria-label="Basic mixed styles example">
+                            <button  type="button" class="btn"
+                                onclick="removerCampoTransformacao()">-</button>
+                            <button type="button" class="btn"
+                                onclick="adicionarCampoTransformacao()">+</button>
+                        </div>
+
+
+                        <div class="row botao mt-4">
+                            <div class="col">
+                                <button id="transformar" class="btn ">Transformar</button>
+                            </div>
+                        </div>
+
+
+                        <div class="row botao">
+                            <div class="col">
+                                <button id="limpar" class="btn btn-primary mb-2">Limpar</button>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-xl-7 pt-3">
+                        <div id="screen"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+</body>
+
+</html>

@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Recorte de Reta por Cohen-Suterland</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/p5.min.js"></script> 
+    <script src="js/funcoesGerais.js"></script>
+    <script src="js/recorteCohenSuter.js"></script> 
+    <script src="js/metodosUtilitarios.js"></script>
+</head>
+
+<body>
+    
+
+    
+<main>
+    <header ><a class="btn"  href="home.html">HOME</a></header>
+    <div class="container-fluid">
+        <div class="container">
+            <div class="row">
+                <h1 class="mt-4">Recorte de linha Cohen-Suterland</h1>
+            </div>
+            <div class="row">
+                <div class="col-xl-5 controles">
+                    <h5 class="mt-4">Informe os dados necessários:</h5>
+                    
+                    <div class="row">
+                        <div class="col">
+                            <input id="reta_xa" type="text" class="form-control" placeholder="X do ponto A">
+                        </div>
+                        <div class="col">
+                            <input id="reta_ya" type="text" class="form-control" placeholder="Y do ponto A">
+                        </div>
+                        <div class="col">
+                            <input id="reta_xb" type="text" class="form-control" placeholder="X do ponto B">
+                        </div>
+                        <div class="col">
+                            <input id="reta_yb" type="text" class="form-control" placeholder="Y do ponto B">
+                        </div>
+                    </div>
+                    
+                    <div class="row botao mt-4">
+                        <div class="col">
+                            <button id="desenhar-reta" class="btn btn-primary mb-2">Desenhar Reta</button>
+                        </div>
+                    </div>
+                    
+                    <h5 class="mt-4">Configurações da janela de seleção (retângulo):</h5>
+                    <div class="row">
+                        <div class="col">
+                            <input id="retangulo_x" type="text" class="form-control" placeholder="x">
+                        </div>
+                        <div class="col">
+                            <input id="retangulo_y" type="text" class="form-control" placeholder="y">
+                        </div>
+                        <div class="col">
+                            <input id="retangulo_w" type="text" class="form-control" placeholder="largura">
+                        </div>
+                        <div class="col">
+                            <input id="retangulo_h" type="text" class="form-control" placeholder="altura">
+                        </div>
+                    </div>
+                    
+                    <div class="row botao mt-4">
+                        <div class="col">
+                            <button id="desenhar-janela" class="btn btn-primary mb-2">Desenhar janela de seleção</button>
+                        </div>
+                    </div>
+                    
+                    <div class="row botao mt-4">
+                        <div class="col">
+                            <button id="recortar" class="btn btn-primary mb-2">Aplicar recorte</button>
+                        </div>
+                    </div>
+                    
+                    <div class="row botao">
+                        <div class="col">
+                            <button id="limpar" class="btn btn-primary mb-2">Limpar</button>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="col-xl-7 pt-3">
+                    <div id="screen"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+    
+</body>
+</html>
